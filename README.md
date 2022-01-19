@@ -1,70 +1,37 @@
-# Unit 19 PWA Homework: Online/Offline Budget Trackers
+# Note_Taker
 
-Add functionality to our existing Budget Tracker application to allow for offline access and functionality.
+## Description
 
-The user will be able to add expenses and deposits to their budget with or without a connection. When entering transactions offline, they should populate the total when brought back online.
+    This app was an excercise in setting up an App to be both installable as well as have the ability to add information while offline that is later pushed to the server (once connection is restored). 
 
-Offline Functionality:
+    The app is currently deployed at:
 
-  * Enter deposits offline
+    https://budget-tracker3123.herokuapp.com/
 
-  * Enter expenses offline
+  
+## Table of Contents
+      - [Installation](#installation)
+      - [Usage](#usage)
+      - [Contributing](#contributions)
+      - [License](#license)
+      - [Tests] (#test)
+      - [Questions](#questions)
+  ## Installation
+          If you are attempting to run this locally, you will need to use the following commands after cloning the repo:
 
-When brought back online:
+          -npm i
+          -node server.js
 
-  * Offline entries should be added to tracker.
+          This should then show in your command line a link to your localhost with a port of 3001 (default)
 
-## User Story
-AS AN avid traveller
-I WANT to be able to track my withdrawals and deposits with or without a data/internet connection
-SO THAT my account balance is accurate when I am traveling
-
-## Business Context
-
-Giving users a fast and easy way to track their money is important, but allowing them to access that information anytime is even more important. Having offline functionality is paramount to our applications success.
-
-
-## Acceptance Criteria
-GIVEN a user is on Budget App without an internet connection
-WHEN the user inputs a withdrawal or deposit
-THEN that will be shown on the page, and added to their transaction history when their connection is back online.
-
-- - -
-
-## Commit Early and Often
-
-* One of the most important skills to master as a web developer is version control. Building the habit of committing via Git is important for two reasons:
-
-1. Your commit history is a signal to employers that you are actively working on projects and learning new skills
-
-2. Your commit history allows you to revert your code base in the event that you need to return to a previous state
-
-* Follow these guidelines for committing:
-
-  * Make single purpose commits for related changes to ensure a clean, manageable history. If you are fixing two issues, make two commits
-
-  * Write descriptive, meaningful commit messages so that you and anyone else looking at your repository can easily understand its history
-
-  * Don't commit half done work, for the sake of your collaborators (and your future self!)
-
-  * Test your application before you commit to ensure functionality at every step in the development process
-
-* We would like you to have well over 200 commits by graduation, so commit early and often!
-
-* Deploy your application with [Heroku and MongoDB Atlas.](../important/MongoAtlas-Deploy.md)
-
-## Submission on BCS
-
-* You are required to submit the following:
-
-  * the URL to the deployed application
-
-  * the URL to the Github repository
-
-- - -
-
-## Hint
-
-* In order to cache dynamic content, i.e. users' inputs for withdrawals or deposits, incorporate `indexedDB` from the previous module.
-
-* Use [Google](https://www.google.com) or another search engine to research this topic.
+          Once running, you should be able to use Chrome Tools or other Dev Tools to disconnect the webpage from connected, but still allows you to enter transactions. Which will be updated to the server upon refresh of page. It accomplishes this by using IndexedDB to store the items that are listed in the service worker file.
+  ## Usage
+          Application usage is simply to enter a transaction name as well as an amount, and then choose whther it was added to your budget or subtracted.
+  ## Contributions
+          Not much to contribute but if you would like to send a pull request, please feel free, basic considerations of form and format please.
+  ## License
+        Not licensed as it is part of learning materials.
+  ## Tests
+          This application has no tests attributed to it
+  ## Questions
+      If you have any questions, please feel free to reach out to me here.
